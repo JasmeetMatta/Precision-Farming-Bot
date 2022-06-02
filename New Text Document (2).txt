@@ -1,0 +1,196 @@
+void Movement(){
+    switch(face){
+        case 0:
+            //Serial.print("Facing North");
+            if(object == false && objectLocationY > currentMapLocationY){
+              //Serial.print("IN first IF");
+                while(currentMapLocationY != objectLocationY){
+                    //Serial.println("IN While");
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == false && objectLocationY == currentMapLocationY){
+                if(objectLocationX > currentMapLocationX){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (objectLocationX == currentMapLocationX){
+                    state = Stop;
+                    switchState();
+                    object = true;
+                }
+                else if (objectLocationX < currentMapLocationX){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationY > currentMapLocationY){
+                while(currentMapLocationY != dropLocationY){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationY == currentMapLocationY){
+                if(dropLocationX > currentMapLocationX){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (dropLocationX == currentMapLocationX){
+                    state = Stop;
+                    switchState();
+                    onDrop = true;
+                }
+                else if (dropLocationX < currentMapLocationX){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+        case 1:
+            if(object == false && objectLocationX < currentMapLocationX){
+                while(currentMapLocationX != objectLocationX){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == false && objectLocationX == currentMapLocationX){
+                if(objectLocationY > currentMapLocationY){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (objectLocationY == currentMapLocationY){
+                    state = Stop;
+                    switchState();
+                    object = true;
+                }
+                else if (objectLocationY < currentMapLocationY){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationX < currentMapLocationX){
+                while(currentMapLocationX != dropLocationX){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationX == currentMapLocationX){
+                if(dropLocationY > currentMapLocationY){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (dropLocationY == currentMapLocationY){
+                    state = Stop;
+                    switchState();
+                    onDrop = true;
+                }
+                else if (dropLocationY < currentMapLocationY){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+        case 2:
+            if(object == false && objectLocationY < currentMapLocationY){
+                while(currentMapLocationY != objectLocationY){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == false && objectLocationY == currentMapLocationY){
+                if(objectLocationX < currentMapLocationX){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (objectLocationX == currentMapLocationX){
+                    state = Stop;
+                    switchState();
+                    object = true;
+                }
+                else if (objectLocationX > currentMapLocationX){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationY < currentMapLocationY){
+                while(currentMapLocationY != dropLocationY){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationY == currentMapLocationY){
+                if(dropLocationX < currentMapLocationX){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (dropLocationX == currentMapLocationX){
+                    state = Stop;
+                    switchState();
+                    onDrop = true;
+                }
+                else if (dropLocationX > currentMapLocationX){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+        case 3:
+            if(object == false && objectLocationX > currentMapLocationX){
+                while(currentMapLocationX != objectLocationX){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == false && objectLocationX == currentMapLocationX){
+                if(objectLocationY < currentMapLocationY){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (objectLocationY == currentMapLocationY){
+                    state = Stop;
+                    switchState();
+                    object = true;
+                }
+                else if (objectLocationY > currentMapLocationY){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationX > currentMapLocationX){
+                while(currentMapLocationX != dropLocationX){
+                    state = Forward;
+                    switchState();
+                    onLine();
+                    switchState();
+                }
+            }
+            else if(object == true && onDrop == false && dropLocationX == currentMapLocationX){
+                if(dropLocationY < currentMapLocationY){
+                    rotateRight;
+                    faceChangeRight;
+                }
+                else if (dropLocationY == currentMapLocationY){
+                    state = Stop;
+                    switchState();
+                    onDrop = true;
+                }
+                else if (dropLocationY > currentMapLocationY){
+                    rotateLeft;
+                    faceChangeLeft;
+                }
+            }
+
+    }
+}
