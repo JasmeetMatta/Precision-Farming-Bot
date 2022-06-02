@@ -1,5 +1,5 @@
 
-#define ln1 2
+#define ln1 2 //right
 #define ln2 4
 #define sonicTrig 12
 #define sonicEcho 13
@@ -23,12 +23,12 @@ void setup()
   pinMode(ln2,INPUT);
   pinMode(sonicTrig,INPUT);
   pinMode(sonicEcho,OUTPUT);
-  pinMode(motor1A,OUTPUT);
-  pinMode(motor1B,OUTPUT);
-  pinMode(motor2A,OUTPUT);
-  pinMode(motor2B,OUTPUT);
-  analogWrite(motorPowerA, 160);
-  analogWrite(motorPowerB, 220);
+  pinMode(motorA1,OUTPUT);
+  pinMode(motorB1,OUTPUT);
+  pinMode(motorA2,OUTPUT);
+  pinMode(motorB2,OUTPUT);
+  analogWrite(motorPowerA, 190);
+  analogWrite(motorPowerB, 150);
   Serial.begin(9600);
 }
 
@@ -80,8 +80,8 @@ void switchState(){
      // analogWrite(motorPowerA,255);
       //analogWrite(motorPowerA,255);
       digitalWrite(motorA1,HIGH);
-      digitalWrite(motorB1,LOW);
-      digitalWrite(motorA2,HIGH);
+      digitalWrite(motorB1,HIGH);
+      digitalWrite(motorA2,LOW);
       digitalWrite(motorB2,LOW);
       break;
     case Right:
