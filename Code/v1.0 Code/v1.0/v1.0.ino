@@ -410,9 +410,9 @@ void faceChangeRight(){
 
 // This code is to get current color
 void colorCall(){
-    getRedPW();
-    getBluePW();
-    getGreenPW();
+    redPW = getRedPW();
+    bluePW = getBluePW();
+    greenPW = getGreenPW();
     getColor();
 }
 //This is to get red using filter  s2 s3
